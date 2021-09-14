@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <head>
+        <title>Bug Tracking System</title>
+        <link rel="stylesheet" href = "http://localhost/Muc/ui/styleSheet.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class = "logo">
+                    <h4>Bug Track</h4>
+                </div>
+                <ul class = "nav_links">
+                    <li><a href="http://localhost/Muc/ui/homeUser.php">Domov</a></li>
+                    <li><a href="http://localhost/Muc/ui/profile.php">Osebni Profil</a></li>
+                    <li><a href="http://localhost/Muc/includes/logout.inc.php">Odjava</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class = "info_container">
+            
+            <br></br>
+            <h3>Glavne Funkcionalnosti Uporabnika</h3>            
+            <p>
+                BugTrack je enostaven sistem namenjen beleženju nastalih Napak oziroma Hroščev v postopku razvoja programske opreme.
+                Admin uporabniku pripiše projekte in dodeli napake. Napake, ki v procesu razvoja programskega projekta nastanejo se razporedijo med uporabnike.
+                <br></br>
+                Od Uporabnika se pričakuje, da zavezane hrošče v okviru projekta na katerem dela odpravi. Ko programsko napako odpravi jo v okviru sistema zakjuči.
+                S ustrezno uporabo sistema se ohranja nadzor nad še aktivnimi in že odpravljenimi napakami posameznega projekta.
+                S tem se vrjetnost pojava neodpravljenih napak v končnem izdelku zmanjša.
+                <br></br>
+                Uporabniku sistema so omogočene sledeče funkcionalnosti
+                <ul>
+                    <li>Prijava novo nastalih napak</li>
+                    <li>Zaključevanje odpravljenih napak</li>
+                    <li>Podroben vpogled v specifikacije napake</li>
+                </ul> 
+            </p>
+
+            <br></br>
+            <h3>Prijava Hrošča</h3>
+            <p>
+                Uporabnik mora ob prijavi napake podati sleče podatke
+                <ul>
+                    <li>Naziv projekta v okviru katerega je prišlo do napake</li>
+                    <li>Subjektivno oceno prioritete napake</li>
+                    <li>Podroben opis nastale napake</li>
+                    <li>Specifikacije operacijskega sistema</li>
+                    <li>Specifikacije strojne opreme</li>
+                </ul>
+                Uporabnik lahko zabeleži napako le v okviru enega od projektov na katerega je zavezan. Sistem avtomatsko filtrira in poda vse 
+                projekte trenutno prijavljenega uporabika v obliki seznama.
+            </p>
+
+            <br></br>
+            <h3>Zaključevanje Hrošča</h3>
+            <p>
+                Uporabnik lahko zaključi vse nanj zavezane napake, ki še niso bile zaključene. Sistem preprečuje nenamerno zaključitev napake s tem da
+                uporabnika pred potrditvijo zaključitve opozori.
+            </p>
+
+            <br></br>
+            <h3>Vpogled v Hrošče</h3>
+            <p>
+                Uporabnik ima možnost filtriranja hroščov glede na njivo stanje.
+                Omogočen ima vpogled v seznam že zaklučenih napak ter v seznam še aktivnih napak.
+                Z izbiro filtra se ustrezne napake prikažejo v obliki tabele. S klikom na posamezno napako se odpre informacijska stran, ki podaja Specifikacije Hrošča.
+                <br></br>
+                <img src="../images/bugInfo.PNG" width="40%">
+            </p>
+
+            <br></br>
+            <h3>Vpogled v Projekte</h3>
+            <p>
+                Uporabnik ima možnost vpogleda v vse projekte na katere je zavezan. S klikom na posamezen projekt se odpre seznam vseh napak projekta, s ponovnim klikom
+                na posamezno napako se odpre informacijska stran ki podaja Specifikacije Hrošča.
+            </p>   
+            
+            <br></br>
+            <h2>Glavne Funkcionalnosti Admina</h2>
+            <p>
+                Adminu sta omogočene dve glavni funkcionalnosti in sicer dodelitev projekta in dodelitev programske napake.
+            </p> 
+            
+            <br></br>
+            <h2>Dodelitev Projekta</h2>
+            <p>
+                Admin mora podati ime uporabnika in naziv projekta katerega želi na uporabnika zavezati.
+                Sistem omogoča da na posameznem programskem projektu dela več uporabnikov. Vnos podatkov je enostaven saj 
+                sistem filtrira vse uporabnike in projekte ki so trenutno v podatkovni bazi.
+                <br></br>
+                Primer:
+                Admin je iz seznama ime Uporabnika izbral uporabnika z imenom "test", v seznamu Naziv projekta pa projekt z nazivom "project".
+                Torej Admin lahko uporabnika "test" zaveze na projekt "project".
+                <br></br>
+                <img src="../images/demoAdmin.PNG" width="40%">
+            </p>
+
+            <br></br>
+            <h2>Dodelitev Hrošča</h2>
+            <p>
+
+                Admin mora podati ime uporabnika na katerega želi zavezati programsko napako. Sistem avtomatsko filtrira vse projekte na katere je izbrani
+                uporabnik zavezan. Admin izbere specifičen projekt v katerem se nahaja programska napaka. Sistem ponovno filtrira vse napake, ki so v okviru projekta
+                še aktivne.
+
+                <br></br>
+                Primer: 
+                Uporabnik "marjaz" je zavezan na projekt z nazivom "project", v projektu je aktiven še en hrošč z ID številko "14".
+                Admin lahko uporabnika "matjaz" torej zaveže na hrošča z ID številko "14". Če v okviru projekta "project" nebi bilo nobenega aktivnega hrošča bi bil seznam ID Hrošča prazen!
+                <br></br>
+                <img src="../images/demoAdmin1.PNG" width="40%">  
+            </p>
+        </div>
+    </body>
+</html>
