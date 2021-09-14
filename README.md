@@ -7,7 +7,7 @@ BugTrack is a simple system created for tracking bugs in the process of software
 The system supports two users, a general user and super user or admin.
 Admin assignes projects and existing bugs in that project to a user.
 
-User Features:
+User Features:<br />
   -report a new bug.<br />
   -close an existing bug.<br />
   -get inside into bug details.<br />
