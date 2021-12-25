@@ -13,5 +13,6 @@ Admin assignes projects and existing bugs in that project to a user.
   filter bugs by the project.<br />
   filter bugs by their state.<br />
  
- Demonstration video of the full application is available to download.
+ ### Demonstration video 
+ demo video of the full application is available to download (demo.mp4).
 
