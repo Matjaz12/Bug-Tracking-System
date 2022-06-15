@@ -1,5 +1,5 @@
 # Bug-Tracking-System
-The project was developed for course: `Web Development (Bachelor's degree, FE 2021)`. 
+The project was developed for course [Web Development](https://fe.uni-lj.si/en/education/1st_cycle_academic_study_programme/electrical_engineering/subjects/2009011211101091/). 
 ## Full Stack Web Application
 
 BugTrack is a simple system created for tracking bugs in the process of software development.
